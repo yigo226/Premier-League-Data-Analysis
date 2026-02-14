@@ -1,0 +1,69 @@
+L'observation des données avec mysql commence à partir de la ligne 100.
+référance : database/queries.sql
+
+
+Le nombre de matchs: 380
+réf:Lig. 103
+
+
+Période des matchs:  2021-08-13 à 	2022-05-22
+réf:Lig. 107
+
+
+L'analyse temporelle entre 2021 et 2022 révèle une grande constance 
+dans le spectacle offensif de la Premier League. Avec une moyenne de 2.82 
+buts par match sur l'ensemble de la période, la ligue confirme sa réputation de 
+championnat offensif. L'augmentation du volume total de buts en 2022 (+35 buts) 
+s'explique par un calendrier plus dense ou une meilleure complétude des données, 
+la moyenne par match restant, elle, parfaitement stable.
+réf:Lig. 114
+
+
+L'analyse de l'avantage à domicile (Home Advantage) confirme la domination 
+statistique des équipes recevantes, avec une moyenne globale de 1.51 but
+ contre 1.31 but à l'extérieur sur la période 2021-2022.
+Cependant, on note une tendance à l'équilibrage en 2022 : l'écart de buts 
+s'est resserré (0.13 contre 0.29 en 2021). Cette évolution suggère que les 
+équipes de Premier League voyagent de mieux en mieux, rendant le facteur terrain 
+un peu moins décisif que par le passé. Pour un modèle de prédiction, il reste néanmoins 
+essentiel d'intégrer un poids supérieur pour l'équipe à domicile.
+réf:Lig. 124
+
+Nous pouvons voir les équipes les plus performants :
+    Man City	99
+    Liverpool	94
+    Chelsea	76
+    Tottenham	69
+    Leicester	62
+réf:Lig. 149
+
+Je suis perplexe sur le fait que les gens ont confiances au match à domicile des équipes,
+puisque à les données que j'ai (2021-2022) qui ont les suivantes: domicile (0.320) et à l'extérieur(0.309).
+C'est vrai qu'il y'a une legère différence mais cela est loin de dire que les équipes on une efficacité des tirs chez eux.
+réf:Lig. 161
+
+Le classement final valide la hiérarchie basée sur la puissance offensive (Man City/Liverpool). 
+Cependant, l'analyse des points révèle que la survie en Premier League se situe autour du seuil 
+critique des 40 points. En dessous de ce seuil (Burnley, Watford, Norwich), les équipes présentent 
+des lacunes trop importantes, soit en attaque (Norwich), soit en équilibre global (Watford)
+réf:Lig. 168
+
+L'analyse croisée du classement moyen et de 
+l'activité offensive révèle deux profils 
+d'équipes : les Dominateurs (Man City et Liverpool)
+qui allient haut classement et gros volume de buts,
+et les Spectateurs Fragiles (Watford et Leeds) qui, malgré
+un grand nombre de buts dans leurs matchs (souvent encaissés),
+restent bloqués en bas de tableau. Un cas particulier se dégage avec Brighton,
+capable de maintenir un top 10 avec le volume de buts le plus faible de la
+première moitié de tableau.
+réf: Lig. 206
+
+--- line 226 : correlation simple classemnt - buts
+
+Cette étape de l'analyse démontre que si l'attaque
+permet de gagner des matchs (cas de Man City), c'est 
+capacité à optimiser de faibles scores qui permet de
+stabiliser un classement en milieu de tableau (cas de Brighton).
+En revanche, passer sous la barre des 20 buts marqués à domicile
+sur la saison est un indicateur quasi certain de relégation.
