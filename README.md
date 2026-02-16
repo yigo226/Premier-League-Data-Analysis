@@ -12,8 +12,6 @@ https://www.kaggle.com/datasets/evangower/premier-league-match-data?resource=dow
 
 Base de données : Les données sont importées dans MySQL via un script Python.
 
-
-
 ## Installation
 
 conda env create -f environment.yml
