@@ -1,0 +1,35 @@
+---> image : 04_tirs_cadré__et_but_domicile
+On observe Corrélation Positive, une tendance ascendante : plus le nombre de tirs cadrés (home_shots_target) augmente, plus le nombre de buts (home_goals) a tendance à s'élever. C'est le signe d'une relation logique et saine dans tes données.
+On remarque aussi sur la ligne de 0 des points allant jusqu'à 8 tirs cadrés avec 0 but marqué. C'est l'illustration parfaite du manque de réalisme ou d'un gardien adverse en état de grâce (match nul 0-0 ou défaite malgré une domination).
+En plus de ça il y'a les points isolés tout en haut à droite (ex: 13 ou 15 tirs cadrés pour 6 ou 7 buts) représentent les "festivals offensifs". Ce sont des matchs exceptionnels en Premier League.
+
+---> image : 05_matrice_corr_new_variable
+
+A l'observation du matrice la première corrélation qui frappe à l'oiel
+ est celle des tirs et des tirs cadrés à l'extérieur. Nous pouvons
+ à partir de la corrélation qui est à 73%, se permettre l'interprète en disans 
+qu'il y'a 73% de chance que les tirs lors des rencontre à l'extérieur 
+soit des tirs cadrés.
+Par ailleurs pour les matchs à domicile, il y'a 65% de chance pour les tirs à domicile le soit.
+
+Juste à côté, nous avions 72% venant du croisement du premier mis temps et 
+les buts marqués à l'extérieur. Ici , c'est aussi clair on peut affirmer que 
+les équipes à l'extérieur ont plus de chance de marque pendant la première mis temps.
+Il faut ajoute que ce chiffre n'est pas loin de celle des matchs à domicile puisse 
+que celle ci affiche un chiffre de 70%. 
+
+
+65% de chance pour que les tirs cadrés à l'extérieur se concrétise contre 64% pour les tirs 
+à domicile.
+
+56% pour que les tirs à l'extérieur soit des corners contre 52% à domicile.
+
+51% pour que les buts à l'extérieur soit dans la première mis temp contre 52% pour les buts durant la première mis temps à domicile.
+
+---> image : 06_matrice_corr_new_variable
+Lecture de la heatmap : Rouge → corrélation positive forte ; Bleu → corrélation négative forte ; Blanc → corrélation faible
+
+A but domicile : Corrélations fortes ( home_shots_target → ~0.64 ; goal_difference → ~0.79 ; total_goals → ~0.65 ; home_win → ~0.64 )
+On peut dire que Les tirs cadrés à domicile sont fortement liés aux buts marqués et la différence de but (goal_difference) est très corrélé (0.79). Ce qui nous fait dire que les matchs à domicile donne une possible chance de marque. 
+
+A l'extérieur : On peut remarquer une corrélation négative forte avec goal_difference (-0.76) puisque si l’équipe extérieure marque, la différence devient négative pour l’équipe à domicile.
